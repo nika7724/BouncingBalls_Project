@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>This page is an image page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<h1>OUR APPLICATION</h1>
+<table>
+    <thead>
+    <tr>
+        <th>NO</th>
+        <th>IMAGE</th>
+        <th>DESCRIPTION</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="image : ${images}">
+        <td th:text="${image.no}"/>
+        <td th:text="${image.url}"/>
+        <td th:text="${image.description}"/>
+    </tr>
+    </tbody>
+   </table>
+
+</body>
+</html>
